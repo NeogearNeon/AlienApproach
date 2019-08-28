@@ -24,7 +24,7 @@
                                 <set-val-0-2 comment="false" x="48" y="227">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <get-val-0-2 comment="false" id="0" x="0" y="0"/>
-                                        <int id="1" val="1"/>
+                                        <int id="1" val="2"/>
                                     </plus>
                                 </set-val-0-2>
                                 <dolater comment="false" x="48" y="257">
@@ -163,13 +163,13 @@
         </step>
     </group>
     <group eventID="1" id="-1">
-        <eq comment="false" x="453" y="626">
-            <int id="0" val=""/>
-            <int id="1" val=""/>
-        </eq>
         <eq comment="false" x="701" y="532">
             <int id="0" val=""/>
             <int id="1" val="2"/>
+        </eq>
+        <eq comment="false" x="453" y="626">
+            <int id="0" val=""/>
+            <int id="1" val=""/>
         </eq>
     </group>
 </groups>

@@ -3,21 +3,53 @@
     <group eventID="1" id="0">
         <collide comment="false" x="15" y="15">
             <group eventID="-1" id="-1">
-                <comment-long comment="false" x="26" y="45">
-                    <int id="0" val="See &amp;apos;Explode on Death&amp;apos; behavior to see the logic for HandleDeath."/>
-                </comment-long>
-                <shout comment="false" x="26" y="125">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="HandleDeath"/>
-                </shout>
-                <die comment="false" x="26" y="152">
-                    <ACTOR eid="lastcollided" id="0"/>
-                </die>
-                <die comment="false" x="26" y="179">
-                    <ACTOR eid="this" id="0"/>
-                </die>
+                <if comment="false" x="26" y="45">
+                    <group eventID="1" id="-1"/>
+                    <more comment="false" id="0" x="0" y="0">
+                        <as-number comment="false" id="0" x="0" y="0">
+                            <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+                        </as-number>
+                        <int id="1" val="0"/>
+                    </more>
+                </if>
+                <else comment="false" x="26" y="112">
+                    <group eventID="1" id="-1">
+                        <comment-long comment="false" x="37" y="132">
+                            <int id="0" val="See &amp;apos;Explode on Death&amp;apos; behavior to see the logic for HandleDeath."/>
+                        </comment-long>
+                        <shout comment="false" x="37" y="212">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="HandleDeath"/>
+                        </shout>
+                        <die comment="false" x="37" y="239">
+                            <ACTOR eid="lastcollided" id="0"/>
+                        </die>
+                        <die comment="false" x="37" y="266">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                </else>
             </group>
         </collide>
+    </group>
+    <group eventID="1" id="12">
+        <set-val-1-1 comment="false" x="161" y="423">
+            <ACTOR eid="this" id="0"/>
+        </set-val-1-1>
+    </group>
+    <group eventID="1" id="14">
+        <actor-set-prop comment="false" x="195" y="469">
+            <ACTOR eid="this" id="0"/>
+            <as-number comment="false" id="1" x="0" y="0">
+                <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+            </as-number>
+            <minus comment="false" id="2" x="0" y="0">
+                <as-number comment="false" id="0" x="0" y="0">
+                    <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+                </as-number>
+                <int id="1" val="1"/>
+            </minus>
+        </actor-set-prop>
     </group>
     <group eventID="1" id="-1"/>
 </groups>

@@ -94,7 +94,7 @@ player and increase the movement speed. */
 					{
 						_SlidandIncreasedforSelf = true;
 						actor.moveBy(0, 16, 0.2, Easing.linear);
-						_MovementSpeed = (_MovementSpeed + 1);
+						_MovementSpeed = (_MovementSpeed + 2);
 						runLater(1000 * 0.02, function(timeTask:TimedTask):Void
 						{
 							Engine.engine.setGameAttribute("Slide and Increase Speed", false);
