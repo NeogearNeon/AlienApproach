@@ -42,6 +42,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -70,6 +71,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -98,6 +100,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -126,6 +129,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -154,6 +158,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -182,6 +187,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -210,6 +216,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -238,6 +245,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -256,6 +264,22 @@
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="32" fixedrot="false" fric="0.2" gid="3" id="40" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="b_quit" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="41" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="41" name="b_quit" readable="false" shared="false">
+        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="Animation 0" numframes="1" originx="50" originy="12" sync="false" version="2" width="100">
+            <poly data="4,0,0,50,0,50,13,0,13" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="31" fixedrot="false" fric="0.2" gid="3" id="38" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="b_start" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="39" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="39" name="b_start" readable="false" shared="false">
+        <anim across="1" down="1" durations="100" height="25" id="0" loop="true" name="Animation 0" numframes="1" originx="50" originy="12" sync="false" version="2" width="100">
+            <poly data="4,0,0,50,0,50,13,0,13" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="19" fixedrot="true" fric="0.2" gid="4" id="19" ignoreg="true" inertia="0.01" ldamp="0.0" mass="0.1" name="Base Alien Template" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="20" static="false">
         <snippets>
             <s enabled="true" id="0">
@@ -266,6 +290,7 @@
             <s enabled="true" id="1">
                 <prop id="2147483647" list="0" val="thisactor"/>
                 <prop id="1" list="0" val=""/>
+                <prop id="2" list="0" val="0"/>
             </s>
             <s enabled="true" id="2">
                 <prop id="2147483647" list="0" val="thisactor"/>
@@ -291,6 +316,7 @@
     </tileset>
     <music atlasID="0" desc="" id="15" loop="true" name="Explode" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
     <music atlasID="0" desc="" id="16" loop="true" name="Fire" oid="-1" pan="0" shared="false" stream="false" type="mp3" volume="1"/>
+    <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="42" name="Menu Background" numframes="1" oid="-1" readable="false" repeats="false" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
     <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="28" fixedrot="false" fric="0.2" gid="3" id="11" ignoreg="false" inertia="0.01" ldamp="0.0" mass="0.1" name="Particle" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="12" static="false">
         <snippets>
             <s enabled="true" id="8">

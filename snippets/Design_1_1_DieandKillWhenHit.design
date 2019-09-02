@@ -47,6 +47,13 @@
                 <set-val-1-2 comment="false" x="26" y="40">
                     <int id="0" val="2"/>
                 </set-val-1-2>
+                <apply-filter comment="false" x="26" y="60">
+                    <ACTOR eid="this" id="0"/>
+                    <filter-tint comment="false" id="1" x="0" y="0">
+                        <color b="0" g="153" id="0" r="51"/>
+                        <int id="1" val="100"/>
+                    </filter-tint>
+                </apply-filter>
             </group>
         </init>
     </group>
@@ -56,34 +63,52 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="15" y="51">
                     <group eventID="1" id="-1">
-                        <set-opacity comment="false" x="26" y="81">
+                        <clear-filter comment="false" x="26" y="81">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="33"/>
-                        </set-opacity>
+                        </clear-filter>
+                        <apply-filter comment="false" x="26" y="108">
+                            <ACTOR eid="this" id="0"/>
+                            <filter-tint comment="false" id="1" x="0" y="0">
+                                <color b="0" g="0" id="0" r="204"/>
+                                <int id="1" val="100"/>
+                            </filter-tint>
+                        </apply-filter>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-val-1-2 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="0"/>
                     </eq>
                 </if>
-                <else-if comment="false" x="15" y="120">
+                <else-if comment="false" x="15" y="160">
                     <group eventID="3" id="-1">
-                        <set-opacity comment="false" x="26" y="150">
+                        <clear-filter comment="false" x="26" y="190">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="66"/>
-                        </set-opacity>
+                        </clear-filter>
+                        <apply-filter comment="false" x="26" y="217">
+                            <ACTOR eid="this" id="0"/>
+                            <filter-tint comment="false" id="1" x="0" y="0">
+                                <color b="0" g="204" id="0" r="255"/>
+                                <int id="1" val="100"/>
+                            </filter-tint>
+                        </apply-filter>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-val-1-2 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="1"/>
                     </eq>
                 </else-if>
-                <else-if comment="false" x="15" y="189">
+                <else-if comment="false" x="15" y="269">
                     <group eventID="3" id="-1">
-                        <set-opacity comment="false" x="26" y="219">
+                        <clear-filter comment="false" x="26" y="299">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="100"/>
-                        </set-opacity>
+                        </clear-filter>
+                        <apply-filter comment="false" x="26" y="326">
+                            <ACTOR eid="this" id="0"/>
+                            <filter-tint comment="false" id="1" x="0" y="0">
+                                <color b="0" g="153" id="0" r="51"/>
+                                <int id="1" val="100"/>
+                            </filter-tint>
+                        </apply-filter>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-val-1-2 comment="false" id="0" x="0" y="0"/>

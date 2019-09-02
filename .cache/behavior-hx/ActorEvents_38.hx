@@ -61,17 +61,13 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_1_1_DieandKillWhenHit extends ActorScript
+class ActorEvents_38 extends ActorScript
 {
-	public var _actorHealth:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("actorHealth", "_actorHealth");
-		_actorHealth = 0;
 		
 	}
 	
@@ -79,45 +75,32 @@ class Design_1_1_DieandKillWhenHit extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_actorHealth = 2;
 		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && 1 == mouseState)
 			{
-				if((_actorHealth > 0))
-				{
-					_actorHealth = (_actorHealth - 1);
-					recycleActor(actor.getLastCollidedActor());
-				}
-				else
-				{
-					/* See 'Explode on Death' behavior to see the logic for HandleDeath. */
-					actor.shout("_customEvent_" + "HandleDeath");
-					recycleActor(actor.getLastCollidedActor());
-					recycleActor(actor);
-				}
+				actor.setFilter([createTintFilter(Utils.getColorRGB(51,255,0), 50/100)]);
 			}
 		});
 		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && -1 == mouseState)
 			{
-				if((_actorHealth == 0))
-				{
-					actor.alpha = 33 / 100;
-				}
-				else if((_actorHealth == 1))
-				{
-					actor.alpha = 66 / 100;
-				}
-				else if((_actorHealth == 2))
-				{
-					actor.alpha = 100 / 100;
-				}
+				actor.clearFilters();
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 3 == mouseState)
+			{
+				switchScene(GameModel.get().scenes.get(1).getID(), createFadeOut(0.5, Utils.getColorRGB(0,0,0)), createFadeIn(0.5, Utils.getColorRGB(0,0,0)));
 			}
 		});
 		

@@ -11,12 +11,12 @@
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_1_1_DieandKillWhenHit" classname="scripts.Design_1_1_DieandKillWhenHit" desc="When hit, kill the collided actor and kill self." description="When hit, kill the collided actor and kill self." design="true" drawOrder="0" id="1" name="Die and Kill When Hit" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="actorHealth" hidden="false" id="2" name="_actorHealth" order="2"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="actorHealth" hidden="false" id="2" name="_actorHealth" order="2"/>
         <blocks/>
         <events>
             <event displayName="Actor - Any" enabled="true" id="1" name="collide" order="1" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="3" repeats="true"/>
-            <event displayName="Collision - Opacity" enabled="true" id="3" name="collide" order="2" repeats="true"/>
+            <event displayName="CollisionTint" enabled="true" id="3" name="collide" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_2_2_ExplodeonDeath" classname="scripts.Design_2_2_ExplodeonDeath" desc="Spawns actors and sends them in random directions when the actor dies." description="Spawns actors and sends them in random directions when the actor dies." design="true" drawOrder="0" id="2" name="Explode on Death" oid="-1" package="" shared="false" type="actor">
@@ -182,5 +182,26 @@
     <snippet actorid="13" attachedevent="true" class="scripts.ActorEvents_13" classname="scripts.ActorEvents_13" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="29" name="ActorEvents_13" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_2" classname="scripts.SceneEvents_2" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="30" name="SceneEvents_2" oid="-1" package="scripts." sceneid="2" shared="false" type="scene">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="38" attachedevent="true" class="scripts.ActorEvents_38" classname="scripts.ActorEvents_38" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="31" name="ActorEvents_38" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="ExitClick" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="Tint" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+            <event displayName="Untint" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="40" attachedevent="true" class="scripts.ActorEvents_40" classname="scripts.ActorEvents_40" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="32" name="ActorEvents_40" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="On Actor" enabled="true" id="1" name="event-mouse-enter-exit-actor" order="1" repeats="true"/>
+            <event displayName="Tint" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+            <event displayName="Untint" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+        </events>
     </snippet>
 </pack>
