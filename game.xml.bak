@@ -10,10 +10,10 @@
         <e enabled="false" id="test-flash"/>
     </exts>
     <bundles>
+        <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="Mac App Store" version="1.0"/>
         <bundle author="" id="com.yourcompany.gamename" internalVersion="1" metroColor="-12566464" name="" store="Windows Store" version="1.0"/>
         <bundle id="com.company.gamename" internalVersion="1" name="My Game" store="Google Play" version="1.0"/>
         <bundle id="com.company.gamename" internalVersion="1" name="My Game" store="App Store" version="1.0"/>
-        <bundle id="com.yourcompany.gamename" internalVersion="1" name="My Game" store="Mac App Store" version="1.0"/>
     </bundles>
     <scales>
         <scale detailed="1x" id="0" name="1x" size="1.0"/>
@@ -84,8 +84,12 @@
     <props/>
     <attributes>
         <boolean cid="-1" id="2" name="Slide and Increase Speed" save="true" value="false"/>
+        <boolean cid="-1" id="7" name="MusicStarted" save="true" value="false"/>
         <boolean cid="-1" id="3" name="PlayerAlive" save="true" value="true"/>
+        <boolean cid="-1" id="5" name="SoundDisabled" save="true" value="false"/>
+        <boolean cid="-1" id="6" name="MusicDisabled" save="true" value="false"/>
         <boolean cid="-1" id="0" name="Move Right" save="true" value="true"/>
+        <number cid="-1" id="4" name="EnemiesLeft" save="true" value="99.0"/>
     </attributes>
     <collisions>
         <poly id="1" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>
@@ -112,7 +116,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="1,5,9,11,13,15,16,17,18,19,21,23,25,27,29,31,33,35,38,40,42," name="Main Atlas (Default)" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="1,5,9,11,13,15,16,17,18,19,21,23,25,27,29,31,33,35,38,40,42,43,45,47,49,51,53,54,56," name="Main Atlas (Default)" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>

@@ -74,6 +74,10 @@ class ActorEvents_11 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		actor.setIgnoreGravity(!true);
+		setGravity(0, 100);
+		
 	}
 	
 	override public function forwardMessage(msg:String)
