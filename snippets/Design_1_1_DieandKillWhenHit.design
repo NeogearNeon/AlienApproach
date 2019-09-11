@@ -14,27 +14,51 @@
                         <die comment="false" x="26" y="111">
                             <ACTOR eid="lastcollided" id="0"/>
                         </die>
+                        <set-game-val-8 comment="false" x="26" y="138">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-game-val-8 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </set-game-val-8>
+                        <set-game-val-4 comment="false" x="26" y="168">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </set-game-val-4>
                     </group>
                     <more comment="false" id="0" x="0" y="0">
                         <get-val-1-2 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="0"/>
                     </more>
                 </if>
-                <else comment="false" x="15" y="150">
+                <else comment="false" x="15" y="210">
                     <group eventID="1" id="-1">
-                        <comment-long comment="false" x="26" y="170">
+                        <comment-long comment="false" x="26" y="230">
                             <int id="0" val="See &amp;apos;Explode on Death&amp;apos; behavior to see the logic for HandleDeath."/>
                         </comment-long>
-                        <shout comment="false" x="26" y="250">
+                        <shout comment="false" x="26" y="310">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="HandleDeath"/>
                         </shout>
-                        <die comment="false" x="26" y="277">
+                        <die comment="false" x="26" y="337">
                             <ACTOR eid="lastcollided" id="0"/>
                         </die>
-                        <die comment="false" x="26" y="304">
+                        <die comment="false" x="26" y="364">
                             <ACTOR eid="this" id="0"/>
                         </die>
+                        <set-game-val-8 comment="false" x="26" y="391">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-game-val-8 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </set-game-val-8>
+                        <set-game-val-4 comment="false" x="26" y="421">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </set-game-val-4>
                     </group>
                 </else>
             </group>

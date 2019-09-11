@@ -83,10 +83,12 @@
     </attcats>
     <props/>
     <attributes>
+        <number cid="-1" id="9" name="AliensLeft" save="true" value="0.0"/>
         <boolean cid="-1" id="2" name="Slide and Increase Speed" save="true" value="false"/>
         <boolean cid="-1" id="7" name="MusicStarted" save="true" value="false"/>
         <boolean cid="-1" id="3" name="PlayerAlive" save="true" value="true"/>
         <boolean cid="-1" id="5" name="SoundDisabled" save="true" value="false"/>
+        <number cid="-1" id="8" name="Bullets Alive" save="true" value="0.0"/>
         <boolean cid="-1" id="6" name="MusicDisabled" save="true" value="false"/>
         <boolean cid="-1" id="0" name="Move Right" save="true" value="true"/>
         <number cid="-1" id="4" name="EnemiesLeft" save="true" value="99.0"/>
@@ -116,7 +118,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="1,5,9,11,13,15,16,17,18,19,21,23,25,27,29,31,33,35,38,40,42,43,45,47,49,51,53,54,56," name="Main Atlas (Default)" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="1,5,9,11,13,15,16,17,18,19,21,23,25,27,29,31,33,35,38,40,42,43,45,47,49,51,53,54,56,57,59," name="Main Atlas (Default)" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>

@@ -15,7 +15,25 @@
             <group eventID="-1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="-1" id="-1">
-                        <die comment="false" x="37" y="78">
+                        <if comment="false" x="37" y="78">
+                            <group eventID="2" id="-1">
+                                <set-game-val-8 comment="false" x="48" y="116">
+                                    <minus comment="false" id="0" x="0" y="0">
+                                        <get-game-val-8 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="1"/>
+                                    </minus>
+                                </set-game-val-8>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <getatype comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="var" id="0" vid="2147483647"/>
+                                </getatype>
+                                <pick-type comment="false" id="1" x="0" y="0">
+                                    <actortype eid="9" id="0"/>
+                                </pick-type>
+                            </eq>
+                        </if>
+                        <die comment="false" x="37" y="158">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>

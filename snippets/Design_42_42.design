@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <receive-message comment="false" x="1" y="51">
+            <group eventID="1" id="-1">
+                <if comment="false" x="12" y="76">
+                    <group eventID="1" id="-1">
+                        <play-sound4 comment="false" x="23" y="106">
+                            <int id="0" val="0"/>
+                            <sound eid="var" id="1" vid="8"/>
+                        </play-sound4>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <repeat comment="false" x="12" y="145">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="23" y="170">
+                            <get-val-42-3 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="2"/>
+                                </get-wh>
+                            </plus>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="3"/>
+                                </get-wh>
+                            </plus>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <setav comment="false" x="23" y="215">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <randint comment="false" id="1" x="0" y="0">
+                                <int id="0" val="-180"/>
+                                <int id="1" val="180"/>
+                            </randint>
+                        </setav>
+                        <push-shove2 comment="false" x="23" y="247">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="1"/>
+                            <randint comment="false" id="2" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <int id="1" val="360"/>
+                            </randint>
+                            <get-val-42-2 comment="false" id="3" x="0" y="0"/>
+                        </push-shove2>
+                    </group>
+                    <get-val-42-1 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <repeat comment="false" x="12" y="291">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="23" y="316">
+                            <get-val-42-6 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="2"/>
+                                </get-wh>
+                            </plus>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="3"/>
+                                </get-wh>
+                            </plus>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <setav comment="false" x="23" y="361">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <randint comment="false" id="1" x="0" y="0">
+                                <int id="0" val="-180"/>
+                                <int id="1" val="180"/>
+                            </randint>
+                        </setav>
+                        <push-shove2 comment="false" x="23" y="393">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="1"/>
+                            <randint comment="false" id="2" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <int id="1" val="360"/>
+                            </randint>
+                            <get-val-42-7 comment="false" id="3" x="0" y="0"/>
+                        </push-shove2>
+                    </group>
+                    <get-val-42-5 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+                <repeat comment="false" x="12" y="437">
+                    <group eventID="1" id="-1">
+                        <create-actor3 comment="false" x="23" y="462">
+                            <get-val-42-11 comment="false" id="0" x="0" y="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="2"/>
+                                </get-wh>
+                            </plus>
+                            <plus comment="false" id="2" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-wh comment="false" id="1" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="3"/>
+                                </get-wh>
+                            </plus>
+                            <int id="3" val="0"/>
+                        </create-actor3>
+                        <setav comment="false" x="23" y="507">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <randint comment="false" id="1" x="0" y="0">
+                                <int id="0" val="-180"/>
+                                <int id="1" val="180"/>
+                            </randint>
+                        </setav>
+                        <push-shove2 comment="false" x="23" y="539">
+                            <ACTOR eid="lastcreated" id="0"/>
+                            <int id="1" val="1"/>
+                            <randint comment="false" id="2" x="0" y="0">
+                                <int id="0" val="1"/>
+                                <int id="1" val="360"/>
+                            </randint>
+                            <get-val-42-10 comment="false" id="3" x="0" y="0"/>
+                        </push-shove2>
+                    </group>
+                    <get-val-42-9 comment="false" id="0" x="0" y="0"/>
+                </repeat>
+            </group>
+            <int id="0" val="HandleDeath"/>
+        </receive-message>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>
