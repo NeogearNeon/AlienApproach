@@ -11,7 +11,7 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="3" id="1" name="Player Tank 1" order="0" sx="1.0" sy="1.0" x="256" y="384" z="0"/>
+        <actor a="0.0" aid="1" c="false" group="0" id="1" name="Player Tank 1" order="0" sx="1.0" sy="1.0" x="256" y="384" z="0"/>
         <actor a="0.0" aid="34" c="false" group="4" id="5" name="Alien I 34" order="1" sx="1.0" sy="1.0" x="128" y="64" z="0"/>
         <actor a="0.0" aid="35" c="false" group="4" id="21" name="Alien N 35" order="2" sx="1.0" sy="1.0" x="192" y="64" z="0"/>
         <actor a="0.0" aid="36" c="false" group="4" id="23" name="Alien S 36" order="3" sx="1.0" sy="1.0" x="256" y="64" z="0"/>

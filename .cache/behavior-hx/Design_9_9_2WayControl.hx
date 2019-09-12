@@ -72,18 +72,27 @@ class Design_9_9_2WayControl extends ActorScript
 	public var decel:Float;
 	public function _customEvent_moveRight():Void
 	{
-		actor.setXVelocity(topSpeed);
-		dir = 4;
+		if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+		{
+			actor.setXVelocity(topSpeed);
+			dir = 4;
+		}
 	}
 	public function _customEvent_checkInput():Void
 	{
-		pressedLeft = isKeyDown(controlLeft);
-		pressedRight = isKeyDown(controlRight);
+		if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+		{
+			pressedLeft = isKeyDown(controlLeft);
+			pressedRight = isKeyDown(controlRight);
+		}
 	}
 	public function _customEvent_moveLeft():Void
 	{
-		actor.setXVelocity(-(topSpeed));
-		dir = 3;
+		if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+		{
+			actor.setXVelocity(-(topSpeed));
+			dir = 3;
+		}
 	}
 	
 	
@@ -114,33 +123,36 @@ class Design_9_9_2WayControl extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				_customEvent_checkInput();
-				if((!(pressedLeft) && !(pressedRight)))
+				if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
 				{
-					actor.setXVelocity((actor.getXVelocity() * decel));
-				}
-				if((pressedLeft && !(pressedRight)))
-				{
-					_customEvent_moveLeft();
-					actor.setYVelocity(0);
-				}
-				else
-				{
-					if((pressedRight && !(pressedLeft)))
+					_customEvent_checkInput();
+					if((!(pressedLeft) && !(pressedRight)))
 					{
-						_customEvent_moveRight();
+						actor.setXVelocity((actor.getXVelocity() * decel));
+					}
+					if((pressedLeft && !(pressedRight)))
+					{
+						_customEvent_moveLeft();
 						actor.setYVelocity(0);
 					}
-				}
-				if((actor.getXVelocity() > topSpeed))
-				{
-					actor.setXVelocity(topSpeed);
-				}
-				else
-				{
-					if((actor.getXVelocity() < -(topSpeed)))
+					else
 					{
-						actor.setXVelocity(-(topSpeed));
+						if((pressedRight && !(pressedLeft)))
+						{
+							_customEvent_moveRight();
+							actor.setYVelocity(0);
+						}
+					}
+					if((actor.getXVelocity() > topSpeed))
+					{
+						actor.setXVelocity(topSpeed);
+					}
+					else
+					{
+						if((actor.getXVelocity() < -(topSpeed)))
+						{
+							actor.setXVelocity(-(topSpeed));
+						}
 					}
 				}
 			}

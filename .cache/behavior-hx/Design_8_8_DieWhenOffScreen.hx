@@ -61,29 +61,35 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_9 extends ActorScript
+class Design_8_8_DieWhenOffScreen extends ActorScript
 {
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
 		
 	}
 	
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		actor.makeAlwaysSimulate();
+		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == false))
+				if(!(actor.isOnScreen()))
 				{
-					actor.setYVelocity(0);
-					actor.setXVelocity(0);
-					actor.currAnimation.setFrameDuration(actor.getCurrentFrame(), 99999999);
+					if((actor.getType() == getActorType(9)))
+					{
+						Engine.engine.setGameAttribute("Bullets Alive", ((Engine.engine.getGameAttribute("Bullets Alive") : Float) - 1));
+					}
+					recycleActor(actor);
 				}
 			}
 		});

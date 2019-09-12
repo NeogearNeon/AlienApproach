@@ -61,7 +61,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_9 extends ActorScript
+class ActorEvents_33 extends ActorScript
 {
 	
 	
@@ -74,19 +74,8 @@ class ActorEvents_9 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == false))
-				{
-					actor.setYVelocity(0);
-					actor.setXVelocity(0);
-					actor.currAnimation.setFrameDuration(actor.getCurrentFrame(), 99999999);
-				}
-			}
-		});
+		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("EnemiesLeft", ((Engine.engine.getGameAttribute("EnemiesLeft") : Float) + 1));
 		
 	}
 	

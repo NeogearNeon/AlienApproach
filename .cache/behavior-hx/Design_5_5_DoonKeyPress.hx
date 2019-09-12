@@ -61,13 +61,19 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_9 extends ActorScript
+class Design_5_5_DoonKeyPress extends ActorScript
 {
+	public var action:String;
+	public var key:String;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Actor", "actor");
+		nameMap.set("Action to Perform", "action");
+		action = "";
+		nameMap.set("Key", "key");
 		
 	}
 	
@@ -79,11 +85,9 @@ class ActorEvents_9 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == false))
+				if(isKeyPressed(key))
 				{
-					actor.setYVelocity(0);
-					actor.setXVelocity(0);
-					actor.currAnimation.setFrameDuration(actor.getCurrentFrame(), 99999999);
+					actor.shout("_customEvent_" + action);
 				}
 			}
 		});

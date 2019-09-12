@@ -78,18 +78,21 @@ class Design_7_7_FireBullet extends ActorScript
 	public var _BulletsShot:Float;
 	public function _customEvent_whenThisHearstrigger():Void
 	{
-		if((2 > (Engine.engine.getGameAttribute("Bullets Alive") : Float)))
+		if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
 		{
-			createRecycledActor(bullet, (actor.getXCenter() + _XOffset), (actor.getYCenter() + _YOffset), Script.BACK);
-			_BulletCreated = getLastCreatedActor();
-			getLastCreatedActor().setX((getLastCreatedActor().getX() - ((getLastCreatedActor().getWidth()) / 2)));
-			getLastCreatedActor().setY((getLastCreatedActor().getY() - ((getLastCreatedActor().getHeight()) / 2)));
-			getLastCreatedActor().setAngle(Utils.RAD * ((((Utils.DEG * actor.getAngle()) + shooterangle) - bulletangle)));
-			getLastCreatedActor().setVelocity((((Utils.DEG * actor.getAngle()) + shooterangle) - 180), speed);
-			Engine.engine.setGameAttribute("Bullets Alive", ((Engine.engine.getGameAttribute("Bullets Alive") : Float) + 1));
-			if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
+			if((2 > (Engine.engine.getGameAttribute("Bullets Alive") : Float)))
 			{
-				playSound(sound);
+				createRecycledActor(bullet, (actor.getXCenter() + _XOffset), (actor.getYCenter() + _YOffset), Script.BACK);
+				_BulletCreated = getLastCreatedActor();
+				getLastCreatedActor().setX((getLastCreatedActor().getX() - ((getLastCreatedActor().getWidth()) / 2)));
+				getLastCreatedActor().setY((getLastCreatedActor().getY() - ((getLastCreatedActor().getHeight()) / 2)));
+				getLastCreatedActor().setAngle(Utils.RAD * ((((Utils.DEG * actor.getAngle()) + shooterangle) - bulletangle)));
+				getLastCreatedActor().setVelocity((((Utils.DEG * actor.getAngle()) + shooterangle) - 180), speed);
+				Engine.engine.setGameAttribute("Bullets Alive", ((Engine.engine.getGameAttribute("Bullets Alive") : Float) + 1));
+				if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
+				{
+					playSound(sound);
+				}
 			}
 		}
 	}
@@ -120,7 +123,7 @@ class Design_7_7_FireBullet extends ActorScript
 		nameMap.set("X Offset", "_XOffset");
 		_XOffset = 0.0;
 		nameMap.set("BulletsShot", "_BulletsShot");
-		_BulletsShot = 0;
+		_BulletsShot = 0.0;
 		
 	}
 	
