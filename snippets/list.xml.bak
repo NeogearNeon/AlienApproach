@@ -104,6 +104,8 @@
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Keyboard" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="3" name="draw" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="1" attachedevent="true" class="scripts.ActorEvents_1" classname="scripts.ActorEvents_1" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="15" name="ActorEvents_1" oid="-1" package="scripts." shared="false" type="actor">
@@ -315,6 +317,21 @@
             <event displayName="Collision - EnProj" enabled="true" id="2" name="event-collide-actortogroup" order="2" repeats="true"/>
             <event displayName="Collision - Alien" enabled="true" id="3" name="event-collide-actortogroup" order="5" repeats="true"/>
             <event displayName="HandleDeath" enabled="true" id="4" name="event-custom" order="6" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="61" attachedevent="true" class="scripts.ActorEvents_61" classname="scripts.ActorEvents_61" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="44" name="ActorEvents_61" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="38" attachedevent="true" class="scripts.ActorEvents_66" classname="scripts.ActorEvents_66" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="46" name="ActorEvents_66" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="ExitClick" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="Tint" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+            <event displayName="Untint" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
         </events>
     </snippet>
 </pack>

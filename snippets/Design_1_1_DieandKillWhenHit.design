@@ -20,12 +20,12 @@
                                 <int id="1" val="1"/>
                             </minus>
                         </set-game-val-8>
-                        <set-game-val-4 comment="false" x="26" y="168">
-                            <minus comment="false" id="0" x="0" y="0">
-                                <get-game-val-4 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="1"/>
-                            </minus>
-                        </set-game-val-4>
+                        <set-game-val-10 comment="false" x="26" y="168">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="10"/>
+                            </plus>
+                        </set-game-val-10>
                     </group>
                     <more comment="false" id="0" x="0" y="0">
                         <get-val-1-2 comment="false" id="0" x="0" y="0"/>
@@ -59,6 +59,12 @@
                                 <int id="1" val="1"/>
                             </minus>
                         </set-game-val-4>
+                        <set-game-val-10 comment="false" x="26" y="451">
+                            <plus comment="false" id="0" x="0" y="0">
+                                <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="30"/>
+                            </plus>
+                        </set-game-val-10>
                     </group>
                 </else>
             </group>

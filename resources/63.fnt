@@ -1,0 +1,15 @@
+#
+#Mon Sep 16 12:30:49 GMT-04:00 2019
+style=bold
+alphabet=
+color=\#ffffff
+shadow.y=0
+family=Serif
+shadow.x=0
+shadow.color=\#000000
+gradient.offset=0
+shadow.blur=0
+chars=all
+stroke.size=1
+antialias=true
+size=16

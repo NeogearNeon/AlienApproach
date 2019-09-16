@@ -6,14 +6,153 @@
                 <set-game-val-4 comment="false" x="26" y="40">
                     <int id="0" val="0"/>
                 </set-game-val-4>
-                <set-game-val-3 comment="false" x="26" y="60">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-game-val-3>
-                <set-game-val-8 comment="false" x="26" y="85">
+                <set-game-val-8 comment="false" x="26" y="60">
                     <int id="0" val="0"/>
                 </set-game-val-8>
+                <if comment="false" x="26" y="80">
+                    <group eventID="1" id="-1">
+                        <set-game-val-3 comment="false" x="37" y="110">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-3>
+                        <set-game-val-10 comment="false" x="37" y="135">
+                            <int id="0" val="0"/>
+                        </set-game-val-10>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
             </group>
         </init>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-key-press-release comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="42">
+                    <group eventID="2" id="-1">
+                        <pause-unpause comment="false" x="37" y="67">
+                            <int id="0" val="1"/>
+                        </pause-unpause>
+                    </group>
+                    <is-paused comment="false" id="0" x="0" y="0"/>
+                </if>
+                <else comment="false" x="26" y="106">
+                    <group eventID="2" id="-1">
+                        <pause-unpause comment="false" x="37" y="126">
+                            <int id="0" val="0"/>
+                        </pause-unpause>
+                    </group>
+                </else>
+            </group>
+            <control eid="8" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="3" id="-1">
+                        <set-alpha comment="false" x="37" y="65">
+                            <int id="0" val="90"/>
+                        </set-alpha>
+                        <set-color comment="false" x="37" y="85">
+                            <color b="0" g="0" id="0" r="0"/>
+                        </set-color>
+                        <drawfill-rect comment="false" x="37" y="112">
+                            <int id="0" val="1"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                            <screen-wh comment="false" id="3" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </screen-wh>
+                            <screen-wh comment="false" id="4" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </screen-wh>
+                        </drawfill-rect>
+                        <set-alpha comment="false" x="37" y="152">
+                            <int id="0" val="100"/>
+                        </set-alpha>
+                        <draw-text comment="false" x="37" y="172">
+                            <int id="0" val="[PAUSE SCREEN]    "/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <screen-xy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="2"/>
+                                </screen-xy>
+                                <int id="1" val="80"/>
+                            </minus>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <screen-xy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="3"/>
+                                </screen-xy>
+                                <int id="1" val="16"/>
+                            </minus>
+                        </draw-text>
+                    </group>
+                    <is-paused comment="false" id="0" x="0" y="0"/>
+                </if>
+                <if comment="false" x="26" y="222">
+                    <group eventID="3" id="-1">
+                        <set-alpha comment="false" x="37" y="252">
+                            <int id="0" val="10"/>
+                        </set-alpha>
+                        <set-color comment="false" x="37" y="272">
+                            <color b="0" g="0" id="0" r="0"/>
+                        </set-color>
+                        <drawfill-rect comment="false" x="37" y="299">
+                            <int id="0" val="1"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                            <screen-wh comment="false" id="3" x="0" y="0">
+                                <int id="0" val="0"/>
+                            </screen-wh>
+                            <screen-wh comment="false" id="4" x="0" y="0">
+                                <int id="0" val="1"/>
+                            </screen-wh>
+                        </drawfill-rect>
+                        <set-alpha comment="false" x="37" y="339">
+                            <int id="0" val="100"/>
+                        </set-alpha>
+                        <draw-text comment="false" x="37" y="359">
+                            <int id="0" val="LEVEL COMPLETE!    "/>
+                            <minus comment="false" id="1" x="0" y="0">
+                                <screen-xy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="2"/>
+                                </screen-xy>
+                                <int id="1" val="120"/>
+                            </minus>
+                            <minus comment="false" id="2" x="0" y="0">
+                                <screen-xy comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="3"/>
+                                </screen-xy>
+                                <int id="1" val="16"/>
+                            </minus>
+                        </draw-text>
+                        <dolater comment="false" x="37" y="397">
+                            <group eventID="3" id="-1">
+                                <scene-reload-color comment="false" x="48" y="424">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val=".25"/>
+                                    <color b="0" g="0" id="2" r="0"/>
+                                    <int id="3" val="0"/>
+                                    <int id="4" val=".25"/>
+                                    <color b="0" g="0" id="5" r="0"/>
+                                </scene-reload-color>
+                            </group>
+                            <int id="0" val="1.5"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+            </group>
+        </draw>
+    </group>
+    <group eventID="3" id="-1"/>
 </groups>

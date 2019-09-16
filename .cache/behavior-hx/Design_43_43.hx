@@ -61,43 +61,35 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_42_42 extends ActorScript
+class Design_43_43 extends ActorScript
 {
-	public var _NumberofActorstoCreate:Float;
 	public var _ExplosionForce:Float;
-	public var _ActortoCreate:ActorType;
-	public var _NumberofSecondActorstoCreate:Float;
-	public var _SecondActortoCreate:ActorType;
+	public var _NumberofActorstoCreate:Float;
 	public var _ExplosionForceofSecondActors:Float;
-	public var _SoundtoPlay:Sound;
-	public var _NumberofThirdActorstoCreate:Float;
-	public var _ExplosionForceofThirdActors:Float;
-	public var _ThirdActortoCreate:ActorType;
+	public var _NumberofSecondActorstoCreate:Float;
+	
+	/* ========================= Custom Event ========================= */
 	public function _customEvent_HandleDeath():Void
 	{
-		Engine.engine.setGameAttribute("Score", ((Engine.engine.getGameAttribute("Score") : Float) + 100));
-		if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
-		{
-			playSound(_SoundtoPlay);
-		}
+		Engine.engine.setGameAttribute("PlayerAlive", false);
 		for(index0 in 0...Std.int(_NumberofActorstoCreate))
 		{
-			createRecycledActor(_ActortoCreate, (actor.getX() + (actor.getWidth()/2)), (actor.getY() + (actor.getHeight()/2)), Script.FRONT);
+			createRecycledActor(getActorType(11), (actor.getX() + (actor.getWidth()/2)), (actor.getY() + (actor.getHeight()/2)), Script.FRONT);
 			getLastCreatedActor().setAngularVelocity(Utils.RAD * (randomInt(-180, 180)));
 			getLastCreatedActor().applyImpulseInDirection(randomInt(1, 360), _ExplosionForce);
 		}
 		for(index0 in 0...Std.int(_NumberofSecondActorstoCreate))
 		{
-			createRecycledActor(_SecondActortoCreate, (actor.getX() + (actor.getWidth()/2)), (actor.getY() + (actor.getHeight()/2)), Script.FRONT);
+			createRecycledActor(getActorType(13), (actor.getX() + (actor.getWidth()/2)), (actor.getY() + (actor.getHeight()/2)), Script.FRONT);
 			getLastCreatedActor().setAngularVelocity(Utils.RAD * (randomInt(-180, 180)));
 			getLastCreatedActor().applyImpulseInDirection(randomInt(1, 360), _ExplosionForceofSecondActors);
 		}
-		for(index0 in 0...Std.int(_NumberofThirdActorstoCreate))
+		recycleActor(actor.getLastCollidedActor());
+		actor.alpha = 0 / 100;
+		runLater(1000 * 1.5, function(timeTask:TimedTask):Void
 		{
-			createRecycledActor(_ThirdActortoCreate, (actor.getX() + (actor.getWidth()/2)), (actor.getY() + (actor.getHeight()/2)), Script.FRONT);
-			getLastCreatedActor().setAngularVelocity(Utils.RAD * (randomInt(-180, 180)));
-			getLastCreatedActor().applyImpulseInDirection(randomInt(1, 360), _ExplosionForceofThirdActors);
-		}
+			reloadCurrentScene(createFadeOut(0.25, Utils.getColorRGB(0,0,0)), createFadeIn(0.25, Utils.getColorRGB(0,0,0)));
+		}, actor);
 	}
 	
 	
@@ -105,28 +97,37 @@ class Design_42_42 extends ActorScript
 	{
 		super(actor);
 		nameMap.set("Actor", "actor");
-		nameMap.set("Number of Actors to Create", "_NumberofActorstoCreate");
-		_NumberofActorstoCreate = 10.0;
 		nameMap.set("Explosion Force", "_ExplosionForce");
 		_ExplosionForce = 1.0;
-		nameMap.set("Actor to Create", "_ActortoCreate");
-		nameMap.set("Number of Second Actors to Create", "_NumberofSecondActorstoCreate");
-		_NumberofSecondActorstoCreate = 5.0;
-		nameMap.set("Second Actor to Create", "_SecondActortoCreate");
+		nameMap.set("Number of Actors to Create", "_NumberofActorstoCreate");
+		_NumberofActorstoCreate = 10.0;
 		nameMap.set("Explosion Force of Second Actors", "_ExplosionForceofSecondActors");
 		_ExplosionForceofSecondActors = 0.7;
-		nameMap.set("Sound to Play", "_SoundtoPlay");
-		_SoundtoPlay = getSound(15);
-		nameMap.set("Number of Third Actors to Create", "_NumberofThirdActorstoCreate");
-		_NumberofThirdActorstoCreate = 0.0;
-		nameMap.set("Explosion Force of Third Actors", "_ExplosionForceofThirdActors");
-		_ExplosionForceofThirdActors = 0.0;
-		nameMap.set("Third Actor to Create", "_ThirdActortoCreate");
+		nameMap.set("Number of Second Actors to Create", "_NumberofSecondActorstoCreate");
+		_NumberofSecondActorstoCreate = 5.0;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================= Member of Group ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorGroup(6),event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				_customEvent_HandleDeath();
+			}
+		});
+		
+		/* ======================= Member of Group ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorGroup(4),event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				_customEvent_HandleDeath();
+			}
+		});
 		
 	}
 	

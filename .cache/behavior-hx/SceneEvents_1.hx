@@ -43,6 +43,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import com.stencyl.graphics.shaders.BasicShader;
 import com.stencyl.graphics.shaders.GrayscaleShader;
@@ -61,17 +62,13 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_1_1_DieandKillWhenHit extends ActorScript
+class SceneEvents_1 extends SceneScript
 {
-	public var _actorHealth:Float;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("actorHealth", "_actorHealth");
-		_actorHealth = 0.0;
+		super();
 		
 	}
 	
@@ -79,53 +76,54 @@ class Design_1_1_DieandKillWhenHit extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		_actorHealth = 2;
-		actor.setFilter([createTintFilter(Utils.getColorRGB(51,153,0), 100/100)]);
-		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		Engine.engine.setGameAttribute("EnemiesLeft", 0);
+		Engine.engine.setGameAttribute("Bullets Alive", 0);
+		if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == false))
 		{
-			if(wrapper.enabled)
+			Engine.engine.setGameAttribute("PlayerAlive", true);
+			Engine.engine.setGameAttribute("Score", 0);
+		}
+		
+		/* =========================== Keyboard =========================== */
+		addKeyStateListener("escape", function(pressed:Bool, released:Bool, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && pressed)
 			{
-				if((_actorHealth > 0))
+				if(engine.isPaused())
 				{
-					_actorHealth = (_actorHealth - 1);
-					recycleActor(actor.getLastCollidedActor());
-					Engine.engine.setGameAttribute("Bullets Alive", ((Engine.engine.getGameAttribute("Bullets Alive") : Float) - 1));
-					Engine.engine.setGameAttribute("Score", ((Engine.engine.getGameAttribute("Score") : Float) + 10));
+					engine.unpause();
 				}
 				else
 				{
-					/* See 'Explode on Death' behavior to see the logic for HandleDeath. */
-					actor.shout("_customEvent_" + "HandleDeath");
-					recycleActor(actor.getLastCollidedActor());
-					recycleActor(actor);
-					Engine.engine.setGameAttribute("Bullets Alive", ((Engine.engine.getGameAttribute("Bullets Alive") : Float) - 1));
-					Engine.engine.setGameAttribute("EnemiesLeft", ((Engine.engine.getGameAttribute("EnemiesLeft") : Float) - 1));
-					Engine.engine.setGameAttribute("Score", ((Engine.engine.getGameAttribute("Score") : Float) + 30));
+					engine.pause();
 				}
 			}
 		});
 		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if((_actorHealth == 0))
+				if(engine.isPaused())
 				{
-					actor.clearFilters();
-					actor.setFilter([createTintFilter(Utils.getColorRGB(204,0,0), 100/100)]);
+					g.alpha = (90/100);
+					g.fillColor = Utils.convertColor(Utils.getColorRGB(0,0,0));
+					g.fillRect(0, 0, getScreenWidth(), getScreenHeight());
+					g.alpha = (100/100);
+					g.drawString("" + "[PAUSE SCREEN]    ", (getScreenXCenter() - 80), (getScreenYCenter() - 16));
 				}
-				else if((_actorHealth == 1))
+				if(((Engine.engine.getGameAttribute("EnemiesLeft") : Float) == 0))
 				{
-					actor.clearFilters();
-					actor.setFilter([createTintFilter(Utils.getColorRGB(255,204,0), 100/100)]);
-				}
-				else if((_actorHealth == 2))
-				{
-					actor.clearFilters();
-					actor.setFilter([createTintFilter(Utils.getColorRGB(51,153,0), 100/100)]);
+					g.alpha = (10/100);
+					g.fillColor = Utils.convertColor(Utils.getColorRGB(0,0,0));
+					g.fillRect(0, 0, getScreenWidth(), getScreenHeight());
+					g.alpha = (100/100);
+					g.drawString("" + "LEVEL COMPLETE!    ", (getScreenXCenter() - 120), (getScreenYCenter() - 16));
+					runLater(1000 * 1.5, function(timeTask:TimedTask):Void
+					{
+						reloadCurrentScene(createFadeOut(.25, Utils.getColorRGB(0,0,0)), createFadeIn(.25, Utils.getColorRGB(0,0,0)));
+					}, null);
 				}
 			}
 		});
