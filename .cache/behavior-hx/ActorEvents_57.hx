@@ -85,7 +85,7 @@ class ActorEvents_57 extends ActorScript
 				if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
 				{
 					createRecycledActor(getActorType(59), actor.getX(), actor.getY(), Script.FRONT);
-					getLastCreatedActor().applyImpulseInDirection(randomInt(165, 15), 15);
+					getLastCreatedActor().applyImpulseInDirection(randomInt(165, 15), 10);
 				}
 			}
 		}, actor);

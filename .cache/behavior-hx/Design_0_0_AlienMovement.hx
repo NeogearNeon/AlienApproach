@@ -72,7 +72,7 @@ class Design_0_0_AlienMovement extends ActorScript
 		super(actor);
 		nameMap.set("Actor", "actor");
 		nameMap.set("Movement Speed", "_MovementSpeed");
-		_MovementSpeed = 2.0;
+		_MovementSpeed = 0;
 		nameMap.set("Slid and Increased for Self", "_SlidandIncreasedforSelf");
 		_SlidandIncreasedforSelf = false;
 		
@@ -80,6 +80,9 @@ class Design_0_0_AlienMovement extends ActorScript
 	
 	override public function init()
 	{
+		
+		/* ======================== When Creating ========================= */
+		_MovementSpeed = (_MovementSpeed + ((Engine.engine.getGameAttribute("Stage") : Float) / 2));
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void

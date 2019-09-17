@@ -61,7 +61,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_59 extends ActorScript
+class ActorEvents_68 extends ActorScript
 {
 	
 	
@@ -74,22 +74,13 @@ class ActorEvents_59 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == false))
-				{
-					actor.setIgnoreGravity(!false);
-					actor.disableRotation();
-					actor.setAngularVelocity(Utils.RAD * (0));
-					actor.setXVelocity(0);
-					actor.setYVelocity(0);
-					actor.setVelocity((Utils.DEG * actor.getAngle()), 0);
-					actor.setCurrentFrame(actor.getCurrentFrame());
-					actor.currAnimation.setFrameDuration(actor.getCurrentFrame(), 99999999);
-				}
+				g.setFont(getFont(63));
+				g.drawString("" + (("STAGE: ") + (("" + (Engine.engine.getGameAttribute("Stage") : Float)))), 8, 0);
 			}
 		});
 		

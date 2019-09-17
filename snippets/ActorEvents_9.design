@@ -22,10 +22,49 @@
                             </get-frame>
                             <int id="2" val="99999999"/>
                         </set-frame-duration>
+                        <setvel comment="false" x="37" y="164">
+                            <ACTOR eid="this" id="0"/>
+                            <getdir comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getdir>
+                            <int id="2" val="0"/>
+                        </setvel>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                         <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="216">
+                    <group eventID="1" id="-1">
+                        <set-dxy comment="false" x="37" y="246">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                        <set-dxy comment="false" x="37" y="273">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                        <set-frame-duration comment="false" x="37" y="300">
+                            <ACTOR eid="this" id="0"/>
+                            <get-frame comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </get-frame>
+                            <int id="2" val="99999999"/>
+                        </set-frame-duration>
+                        <setvel comment="false" x="37" y="340">
+                            <ACTOR eid="this" id="0"/>
+                            <getdir comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getdir>
+                            <int id="2" val="0"/>
+                        </setvel>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
                     </eq>
                 </if>
             </group>

@@ -187,9 +187,26 @@
         </step>
     </group>
     <group eventID="1" id="-1">
-        <eq comment="false" x="697" y="502">
+        <get-game-val-11 comment="false" x="583" y="312"/>
+        <eq comment="false" x="667" y="399">
             <int id="0" val=""/>
             <int id="1" val="2"/>
         </eq>
     </group>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-val-0-2 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-0-2 comment="false" id="0" x="0" y="0"/>
+                        <div comment="false" id="1" x="0" y="0">
+                            <get-game-val-11 comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="2"/>
+                        </div>
+                    </plus>
+                </set-val-0-2>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>

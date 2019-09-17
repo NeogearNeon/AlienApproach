@@ -28,7 +28,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="32" name="Alien A" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="3000,100,2000,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -64,7 +64,7 @@
                 <prop id="7" list="0" val="3"/>
                 <prop id="8" list="0" val="15"/>
                 <prop id="9" list="0" val="3"/>
-                <prop id="10" list="0" val="15"/>
+                <prop id="10" list="0" val="10"/>
                 <prop id="11" list="0" val="59"/>
             </s>
         </snippets>
@@ -99,7 +99,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="26" name="Alien E" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="2000,100,3000,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -128,7 +128,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="36" name="Alien H" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="1500,100,3500,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -157,7 +157,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="6" name="Alien I" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="1700,100,3300,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -186,7 +186,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="34" name="Alien L" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="2500,100,2500,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -215,7 +215,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="22" name="Alien N" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="1300,100,3700,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -244,7 +244,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="28" name="Alien R" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="2700,100,2300,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -273,7 +273,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="24" name="Alien S" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="4000,100,1000,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -302,7 +302,7 @@
         </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="30" name="Alien T" readable="false" shared="false">
-        <anim across="1" down="1" durations="100" height="64" id="0" loop="false" name="Animation 0" numframes="1" originx="32" originy="32" sync="false" version="2" width="64">
+        <anim across="2" down="2" durations="500,100,4500,100" height="128" id="0" loop="true" name="Animation 0" numframes="4" originx="32" originy="32" sync="false" version="2" width="128">
             <poly data="4,0,0,64,0,64,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
@@ -543,6 +543,12 @@
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="62" name="ScoreCounter" readable="false" shared="false">
+        <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="70" originy="16" sync="false" version="2" width="140"/>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="47" fixedrot="false" fric="0.2" gid="3" id="68" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="StageCounter" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="69" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" id="69" name="StageCounter" readable="false" shared="false">
         <anim across="1" down="1" durations="100" height="32" id="0" loop="true" name="Animation 0" numframes="1" originx="70" originy="16" sync="false" version="2" width="140"/>
     </sprite>
 </pack>

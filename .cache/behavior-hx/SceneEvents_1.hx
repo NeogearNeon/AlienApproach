@@ -82,6 +82,11 @@ class SceneEvents_1 extends SceneScript
 		{
 			Engine.engine.setGameAttribute("PlayerAlive", true);
 			Engine.engine.setGameAttribute("Score", 0);
+			Engine.engine.setGameAttribute("Stage", 1);
+		}
+		else if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+		{
+			Engine.engine.setGameAttribute("Stage", ((Engine.engine.getGameAttribute("Stage") : Float) + 1));
 		}
 		
 		/* =========================== Keyboard =========================== */
@@ -115,6 +120,7 @@ class SceneEvents_1 extends SceneScript
 				}
 				if(((Engine.engine.getGameAttribute("EnemiesLeft") : Float) == 0))
 				{
+					Engine.engine.setGameAttribute("Bullets Alive", 2);
 					g.alpha = (10/100);
 					g.fillColor = Utils.convertColor(Utils.getColorRGB(0,0,0));
 					g.fillRect(0, 0, getScreenWidth(), getScreenHeight());

@@ -24,7 +24,7 @@
                                 <int id="0" val="165"/>
                                 <int id="1" val="15"/>
                             </randint>
-                            <int id="3" val="15"/>
+                            <int id="3" val="10"/>
                         </push-shove2>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">

@@ -72,26 +72,35 @@ class Design_9_9_2WayControl extends ActorScript
 	public var decel:Float;
 	public function _customEvent_moveRight():Void
 	{
-		if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+		if(!((Engine.engine.getGameAttribute("EnemiesLeft") : Float) == 0))
 		{
-			actor.setXVelocity(topSpeed);
-			dir = 4;
+			if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+			{
+				actor.setXVelocity(topSpeed);
+				dir = 4;
+			}
 		}
 	}
 	public function _customEvent_checkInput():Void
 	{
-		if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+		if(!((Engine.engine.getGameAttribute("EnemiesLeft") : Float) == 0))
 		{
-			pressedLeft = isKeyDown(controlLeft);
-			pressedRight = isKeyDown(controlRight);
+			if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+			{
+				pressedLeft = isKeyDown(controlLeft);
+				pressedRight = isKeyDown(controlRight);
+			}
 		}
 	}
 	public function _customEvent_moveLeft():Void
 	{
-		if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+		if(!((Engine.engine.getGameAttribute("EnemiesLeft") : Float) == 0))
 		{
-			actor.setXVelocity(-(topSpeed));
-			dir = 3;
+			if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
+			{
+				actor.setXVelocity(-(topSpeed));
+				dir = 3;
+			}
 		}
 	}
 	
@@ -154,6 +163,10 @@ class Design_9_9_2WayControl extends ActorScript
 							actor.setXVelocity(-(topSpeed));
 						}
 					}
+				}
+				if(((Engine.engine.getGameAttribute("EnemiesLeft") : Float) == 0))
+				{
+					actor.setXVelocity(0);
 				}
 			}
 		});

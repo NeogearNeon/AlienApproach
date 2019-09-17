@@ -5,19 +5,27 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="34" y="36">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="45" y="66">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <get-val-9-11 comment="false" id="2" x="0" y="0"/>
-                        </set-dxy>
-                        <set-val-9-9 comment="false" x="45" y="98">
-                            <int id="0" val="4"/>
-                        </set-val-9-9>
+                        <if comment="false" x="45" y="66">
+                            <group eventID="1" id="-1">
+                                <set-dxy comment="false" x="56" y="96">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <get-val-9-11 comment="false" id="2" x="0" y="0"/>
+                                </set-dxy>
+                                <set-val-9-9 comment="false" x="56" y="128">
+                                    <int id="0" val="4"/>
+                                </set-val-9-9>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                                <true comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
                     </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                        <true comment="false" id="1" x="0" y="0"/>
-                    </eq>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </noteq>
                 </if>
             </group>
             <int id="0" val="moveRight"/>
@@ -141,6 +149,19 @@
                         <true comment="false" id="1" x="0" y="0"/>
                     </eq>
                 </if>
+                <if comment="false" x="26" y="615">
+                    <group eventID="2" id="-1">
+                        <set-dxy comment="false" x="37" y="645">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
             </group>
         </step>
     </group>
@@ -150,23 +171,31 @@
             <group eventID="-1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="3" id="-1">
-                        <set-val-9-18 comment="false" x="37" y="70">
-                            <keystate comment="false" id="0" x="0" y="0">
-                                <int id="0" val="0"/>
-                                <get-val-9-7 comment="false" id="1" x="0" y="0"/>
-                            </keystate>
-                        </set-val-9-18>
-                        <set-val-9-19 comment="false" x="37" y="108">
-                            <keystate comment="false" id="0" x="0" y="0">
-                                <int id="0" val="0"/>
-                                <get-val-9-8 comment="false" id="1" x="0" y="0"/>
-                            </keystate>
-                        </set-val-9-19>
+                        <if comment="false" x="37" y="70">
+                            <group eventID="3" id="-1">
+                                <set-val-9-18 comment="false" x="48" y="100">
+                                    <keystate comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <get-val-9-7 comment="false" id="1" x="0" y="0"/>
+                                    </keystate>
+                                </set-val-9-18>
+                                <set-val-9-19 comment="false" x="48" y="138">
+                                    <keystate comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="0"/>
+                                        <get-val-9-8 comment="false" id="1" x="0" y="0"/>
+                                    </keystate>
+                                </set-val-9-19>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                                <true comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
                     </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                        <true comment="false" id="1" x="0" y="0"/>
-                    </eq>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </noteq>
                 </if>
             </group>
             <int id="0" val="checkInput"/>
@@ -178,21 +207,29 @@
             <group eventID="-1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="4" id="-1">
-                        <set-dxy comment="false" x="37" y="70">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                            <neg comment="false" id="2" x="0" y="0">
-                                <get-val-9-11 comment="false" id="0" x="0" y="0"/>
-                            </neg>
-                        </set-dxy>
-                        <set-val-9-9 comment="false" x="37" y="107">
-                            <int id="0" val="3"/>
-                        </set-val-9-9>
+                        <if comment="false" x="37" y="70">
+                            <group eventID="4" id="-1">
+                                <set-dxy comment="false" x="48" y="100">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <neg comment="false" id="2" x="0" y="0">
+                                        <get-val-9-11 comment="false" id="0" x="0" y="0"/>
+                                    </neg>
+                                </set-dxy>
+                                <set-val-9-9 comment="false" x="48" y="137">
+                                    <int id="0" val="3"/>
+                                </set-val-9-9>
+                            </group>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                                <true comment="false" id="1" x="0" y="0"/>
+                            </eq>
+                        </if>
                     </group>
-                    <eq comment="false" id="0" x="0" y="0">
-                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                        <true comment="false" id="1" x="0" y="0"/>
-                    </eq>
+                    <noteq comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </noteq>
                 </if>
             </group>
             <int id="0" val="moveLeft"/>
