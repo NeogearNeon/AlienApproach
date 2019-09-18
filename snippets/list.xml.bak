@@ -383,7 +383,7 @@
         <blocks/>
         <events/>
     </snippet>
-    <snippet actorid="61" attachedevent="true" class="scripts.ActorEvents_78" classname="scripts.ActorEvents_78" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="53" name="ActorEvents_78" oid="-1" package="scripts." shared="false" type="actor">
+    <snippet actorid="78" attachedevent="true" class="scripts.ActorEvents_78" classname="scripts.ActorEvents_78" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="53" name="ActorEvents_78" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
