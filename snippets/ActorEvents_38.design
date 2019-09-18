@@ -9,7 +9,19 @@
     <group eventID="2" id="0">
         <event-mouse-enter-exit-actor comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <scene-change-color comment="false" x="26" y="42">
+                <if comment="false" x="26" y="42">
+                    <group eventID="2" id="-1">
+                        <play-sound4 comment="false" x="37" y="72">
+                            <int id="0" val="0"/>
+                            <sound eid="88" id="1"/>
+                        </play-sound4>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <scene-change-color comment="false" x="26" y="111">
                     <scene eid="1" id="0"/>
                     <int id="1" val="0"/>
                     <int id="2" val="0.5"/>

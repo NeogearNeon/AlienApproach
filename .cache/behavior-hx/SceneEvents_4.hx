@@ -75,6 +75,12 @@ class SceneEvents_4 extends SceneScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
+		{
+			playSound(getSound(86));
+		}
+		
 	}
 	
 	override public function forwardMessage(msg:String)

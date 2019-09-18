@@ -43,6 +43,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import com.stencyl.graphics.shaders.BasicShader;
 import com.stencyl.graphics.shaders.GrayscaleShader;
@@ -61,39 +62,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_45 extends ActorScript
+class SceneEvents_6 extends SceneScript
 {
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
+		super();
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		actor.setAnimation("UncheckedAnim");
-		
-		/* =========================== On Actor =========================== */
-		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled && 3 == mouseState)
-			{
-				if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
-				{
-					actor.setAnimation("CheckedAnim");
-					Engine.engine.setGameAttribute("SoundDisabled", true);
-				}
-				else if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == true))
-				{
-					actor.setAnimation("UncheckedAnim");
-					Engine.engine.setGameAttribute("SoundDisabled", false);
-				}
-			}
-		});
 		
 	}
 	

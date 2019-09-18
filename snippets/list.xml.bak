@@ -350,7 +350,9 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="48" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" shared="false" type="scene">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="71" attachedevent="true" class="scripts.ActorEvents_71" classname="scripts.ActorEvents_71" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="49" name="ActorEvents_71" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
@@ -381,12 +383,40 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_5" classname="scripts.SceneEvents_5" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="52" name="SceneEvents_5" oid="-1" package="scripts." sceneid="5" shared="false" type="scene">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="78" attachedevent="true" class="scripts.ActorEvents_78" classname="scripts.ActorEvents_78" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="53" name="ActorEvents_78" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="80" attachedevent="true" class="scripts.ActorEvents_80" classname="scripts.ActorEvents_80" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="54" name="ActorEvents_80" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="ExitClick" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="Tint" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+            <event displayName="Untint" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_6" classname="scripts.SceneEvents_6" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="55" name="SceneEvents_6" oid="-1" package="scripts." sceneid="6" shared="false" type="scene">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_7" classname="scripts.SceneEvents_7" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="56" name="SceneEvents_7" oid="-1" package="scripts." sceneid="7" shared="false" type="scene">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="84" attachedevent="true" class="scripts.ActorEvents_84" classname="scripts.ActorEvents_84" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="57" name="ActorEvents_84" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="ExitClick" enabled="true" id="2" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="Tint" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+            <event displayName="Untint" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
         </events>
     </snippet>
 </pack>

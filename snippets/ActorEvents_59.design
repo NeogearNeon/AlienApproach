@@ -53,6 +53,56 @@
                         <false comment="false" id="1" x="0" y="0"/>
                     </eq>
                 </if>
+                <if comment="false" x="26" y="337">
+                    <group eventID="1" id="-1">
+                        <toggle-grav comment="false" x="37" y="367">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </toggle-grav>
+                        <toggle-rot comment="false" x="37" y="394">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </toggle-rot>
+                        <setav comment="false" x="37" y="421">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                        </setav>
+                        <set-dxy comment="false" x="37" y="448">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                        <set-dxy comment="false" x="37" y="475">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="0"/>
+                        </set-dxy>
+                        <setvel comment="false" x="37" y="502">
+                            <ACTOR eid="this" id="0"/>
+                            <getdir comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </getdir>
+                            <int id="2" val="0"/>
+                        </setvel>
+                        <set-frame comment="false" x="37" y="542">
+                            <ACTOR eid="this" id="0"/>
+                            <get-frame comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </get-frame>
+                        </set-frame>
+                        <set-frame-duration comment="false" x="37" y="582">
+                            <ACTOR eid="this" id="0"/>
+                            <get-frame comment="false" id="1" x="0" y="0">
+                                <ACTOR eid="this" id="0"/>
+                            </get-frame>
+                            <int id="2" val="99999999"/>
+                        </set-frame-duration>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
             </group>
         </step>
     </group>

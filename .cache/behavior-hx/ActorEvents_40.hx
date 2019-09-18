@@ -79,7 +79,14 @@ class ActorEvents_40 extends ActorScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
-				exitGame();
+				if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
+				{
+					playSound(getSound(88));
+				}
+				runLater(1000 * 0.5, function(timeTask:TimedTask):Void
+				{
+					exitGame();
+				}, actor);
 			}
 		});
 		

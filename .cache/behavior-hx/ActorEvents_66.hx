@@ -100,6 +100,10 @@ class ActorEvents_66 extends ActorScript
 		{
 			if(wrapper.enabled && 3 == mouseState)
 			{
+				if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
+				{
+					playSound(getSound(88));
+				}
 				switchScene(GameModel.get().scenes.get(1).getID(), createFadeOut(0.25, Utils.getColorRGB(0,0,0)), createFadeIn(0.25, Utils.getColorRGB(0,0,0)));
 			}
 		});

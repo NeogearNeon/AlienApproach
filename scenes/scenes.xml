@@ -5,4 +5,6 @@
     <scene desc="" format="4.0.1" id="3" name="Options"/>
     <scene desc="" format="4.0.1" id="4" name="Shop"/>
     <scene desc="" format="4.0.1" id="5" name="Game Over"/>
+    <scene desc="" format="4.0.1" id="6" name="HelpRoom"/>
+    <scene desc="" format="4.0.1" id="7" name="CreditRoom"/>
 </scenes>

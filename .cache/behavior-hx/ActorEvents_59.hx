@@ -102,6 +102,17 @@ class ActorEvents_59 extends ActorScript
 					actor.setCurrentFrame(actor.getCurrentFrame());
 					actor.currAnimation.setFrameDuration(actor.getCurrentFrame(), 99999999);
 				}
+				if(((Engine.engine.getGameAttribute("EnemiesLeft") : Float) == 0))
+				{
+					actor.setIgnoreGravity(!false);
+					actor.disableRotation();
+					actor.setAngularVelocity(Utils.RAD * (0));
+					actor.setXVelocity(0);
+					actor.setYVelocity(0);
+					actor.setVelocity((Utils.DEG * actor.getAngle()), 0);
+					actor.setCurrentFrame(actor.getCurrentFrame());
+					actor.currAnimation.setFrameDuration(actor.getCurrentFrame(), 99999999);
+				}
 			}
 		});
 		

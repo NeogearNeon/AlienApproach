@@ -75,7 +75,14 @@ class ActorEvents_49 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		actor.setAnimation("UncheckedAnim");
+		if(((Engine.engine.getGameAttribute("MusicDisabled") : Bool) == false))
+		{
+			actor.setAnimation("UncheckedAnim");
+		}
+		else if(((Engine.engine.getGameAttribute("MusicDisabled") : Bool) == true))
+		{
+			actor.setAnimation("CheckedAnim");
+		}
 		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
@@ -87,12 +94,20 @@ class ActorEvents_49 extends ActorScript
 					actor.setAnimation("CheckedAnim");
 					Engine.engine.setGameAttribute("MusicDisabled", true);
 					fadeSoundOnChannel(1, 0, 0);
+					if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
+					{
+						playSound(getSound(88));
+					}
 				}
 				else if(((Engine.engine.getGameAttribute("MusicDisabled") : Bool) == true))
 				{
 					actor.setAnimation("UncheckedAnim");
 					Engine.engine.setGameAttribute("MusicDisabled", false);
 					fadeSoundOnChannel(1, 0, 100);
+					if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
+					{
+						playSound(getSound(88));
+					}
 				}
 			}
 		});

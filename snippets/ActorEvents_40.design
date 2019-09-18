@@ -3,7 +3,25 @@
     <group eventID="1" id="0">
         <event-mouse-enter-exit-actor comment="false" x="5" y="14">
             <group eventID="1" id="-1">
-                <exit-game comment="false" x="16" y="41"/>
+                <if comment="false" x="16" y="41">
+                    <group eventID="1" id="-1">
+                        <play-sound4 comment="false" x="27" y="71">
+                            <int id="0" val="0"/>
+                            <sound eid="88" id="1"/>
+                        </play-sound4>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <dolater comment="false" x="16" y="110">
+                    <group eventID="1" id="-1">
+                        <exit-game comment="false" x="27" y="137"/>
+                    </group>
+                    <int id="0" val="0.5"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
             </group>
             <ACTOR eid="this" id="0"/>
             <int id="1" val="2"/>

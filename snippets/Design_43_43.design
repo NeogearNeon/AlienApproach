@@ -27,12 +27,24 @@
     <group eventID="4" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <set-game-val-3 comment="false" x="26" y="40">
+                <if comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <play-sound4 comment="false" x="37" y="70">
+                            <int id="0" val="0"/>
+                            <sound eid="89" id="1"/>
+                        </play-sound4>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-5 comment="false" id="0" x="0" y="0"/>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <set-game-val-3 comment="false" x="26" y="109">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-game-val-3>
-                <repeat comment="false" x="26" y="65">
+                <repeat comment="false" x="26" y="134">
                     <group eventID="4" id="-1">
-                        <create-actor3 comment="false" x="37" y="90">
+                        <create-actor3 comment="false" x="37" y="159">
                             <actortype eid="11" id="0"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <get-xy comment="false" id="0" x="0" y="0">
@@ -56,14 +68,14 @@
                             </plus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setav comment="false" x="37" y="135">
+                        <setav comment="false" x="37" y="204">
                             <ACTOR eid="lastcreated" id="0"/>
                             <randint comment="false" id="1" x="0" y="0">
                                 <int id="0" val="-180"/>
                                 <int id="1" val="180"/>
                             </randint>
                         </setav>
-                        <push-shove2 comment="false" x="37" y="167">
+                        <push-shove2 comment="false" x="37" y="236">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
                             <randint comment="false" id="2" x="0" y="0">
@@ -75,9 +87,9 @@
                     </group>
                     <get-val-43-2 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <repeat comment="false" x="26" y="211">
+                <repeat comment="false" x="26" y="280">
                     <group eventID="4" id="-1">
-                        <create-actor3 comment="false" x="37" y="236">
+                        <create-actor3 comment="false" x="37" y="305">
                             <actortype eid="13" id="0"/>
                             <plus comment="false" id="1" x="0" y="0">
                                 <get-xy comment="false" id="0" x="0" y="0">
@@ -101,14 +113,14 @@
                             </plus>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <setav comment="false" x="37" y="281">
+                        <setav comment="false" x="37" y="350">
                             <ACTOR eid="lastcreated" id="0"/>
                             <randint comment="false" id="1" x="0" y="0">
                                 <int id="0" val="-180"/>
                                 <int id="1" val="180"/>
                             </randint>
                         </setav>
-                        <push-shove2 comment="false" x="37" y="313">
+                        <push-shove2 comment="false" x="37" y="382">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
                             <randint comment="false" id="2" x="0" y="0">
@@ -120,16 +132,16 @@
                     </group>
                     <get-val-43-4 comment="false" id="0" x="0" y="0"/>
                 </repeat>
-                <die comment="false" x="26" y="357">
+                <die comment="false" x="26" y="426">
                     <ACTOR eid="lastcollided" id="0"/>
                 </die>
-                <set-opacity comment="false" x="26" y="384">
+                <set-opacity comment="false" x="26" y="453">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="0"/>
                 </set-opacity>
-                <dolater comment="false" x="26" y="411">
+                <dolater comment="false" x="26" y="480">
                     <group eventID="4" id="-1">
-                        <scene-change-color comment="false" x="37" y="438">
+                        <scene-change-color comment="false" x="37" y="507">
                             <scene eid="5" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0.25"/>
