@@ -3,9 +3,9 @@
     <group eventID="1" id="0">
         <event-periodic comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="42">
+                <if comment="false" x="26" y="62">
                     <group eventID="1" id="-1">
-                        <create-actor3 comment="false" x="37" y="72">
+                        <create-actor3 comment="false" x="37" y="92">
                             <actortype eid="59" id="0"/>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
@@ -17,7 +17,7 @@
                             </get-xy>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <push-shove2 comment="false" x="37" y="112">
+                        <push-shove2 comment="false" x="37" y="132">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
                             <randint comment="false" id="2" x="0" y="0">
@@ -33,7 +33,16 @@
                     </eq>
                 </if>
             </group>
-            <int id="0" val="2"/>
+            <minus comment="false" id="0" x="0" y="0">
+                <int id="0" val="2.00"/>
+                <times comment="false" id="1" x="0" y="0">
+                    <int id="0" val="0.05"/>
+                    <minus comment="false" id="1" x="0" y="0">
+                        <get-game-val-11 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </minus>
+                </times>
+            </minus>
             <ACTOR eid="this" id="2"/>
         </event-periodic>
     </group>

@@ -8,7 +8,7 @@
                         <set-val-1-2 comment="false" x="26" y="81">
                             <minus comment="false" id="0" x="0" y="0">
                                 <get-val-1-2 comment="false" id="0" x="0" y="0"/>
-                                <int id="1" val="1"/>
+                                <get-game-val-14 comment="false" id="1" x="0" y="0"/>
                             </minus>
                         </set-val-1-2>
                         <die comment="false" x="26" y="111">

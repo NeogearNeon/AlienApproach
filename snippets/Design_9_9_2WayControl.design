@@ -10,7 +10,7 @@
                                 <set-dxy comment="false" x="56" y="96">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
-                                    <get-val-9-11 comment="false" id="2" x="0" y="0"/>
+                                    <get-game-val-12 comment="false" id="2" x="0" y="0"/>
                                 </set-dxy>
                                 <set-val-9-9 comment="false" x="56" y="128">
                                     <int id="0" val="4"/>
@@ -108,7 +108,7 @@
                                 <set-dxy comment="false" x="48" y="440">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
-                                    <get-val-9-11 comment="false" id="2" x="0" y="0"/>
+                                    <get-game-val-12 comment="false" id="2" x="0" y="0"/>
                                 </set-dxy>
                             </group>
                             <more comment="false" id="0" x="0" y="0">
@@ -116,7 +116,7 @@
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                 </get-dxy>
-                                <get-val-9-11 comment="false" id="1" x="0" y="0"/>
+                                <get-game-val-12 comment="false" id="1" x="0" y="0"/>
                             </more>
                         </if>
                         <else comment="false" x="37" y="484">
@@ -127,7 +127,7 @@
                                             <ACTOR eid="this" id="0"/>
                                             <int id="1" val="0"/>
                                             <neg comment="false" id="2" x="0" y="0">
-                                                <get-val-9-11 comment="false" id="0" x="0" y="0"/>
+                                                <get-game-val-12 comment="false" id="0" x="0" y="0"/>
                                             </neg>
                                         </set-dxy>
                                     </group>
@@ -137,7 +137,7 @@
                                             <int id="1" val="0"/>
                                         </get-dxy>
                                         <neg comment="false" id="1" x="0" y="0">
-                                            <get-val-9-11 comment="false" id="0" x="0" y="0"/>
+                                            <get-game-val-12 comment="false" id="0" x="0" y="0"/>
                                         </neg>
                                     </less>
                                 </if>
@@ -213,7 +213,7 @@
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="0"/>
                                     <neg comment="false" id="2" x="0" y="0">
-                                        <get-val-9-11 comment="false" id="0" x="0" y="0"/>
+                                        <get-game-val-12 comment="false" id="0" x="0" y="0"/>
                                     </neg>
                                 </set-dxy>
                                 <set-val-9-9 comment="false" x="48" y="137">
@@ -236,4 +236,17 @@
         </receive-message>
     </group>
     <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <set-game-val-12 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-9-11 comment="false" id="0" x="0" y="0"/>
+                        <get-game-val-13 comment="false" id="1" x="0" y="0"/>
+                    </plus>
+                </set-game-val-12>
+            </group>
+        </init>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>

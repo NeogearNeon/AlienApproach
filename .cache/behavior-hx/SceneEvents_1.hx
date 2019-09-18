@@ -128,7 +128,7 @@ class SceneEvents_1 extends SceneScript
 					g.drawString("" + "LEVEL COMPLETE!    ", (getScreenXCenter() - 120), (getScreenYCenter() - 16));
 					runLater(1000 * 1.5, function(timeTask:TimedTask):Void
 					{
-						reloadCurrentScene(createFadeOut(.25, Utils.getColorRGB(0,0,0)), createFadeIn(.25, Utils.getColorRGB(0,0,0)));
+						switchScene(GameModel.get().scenes.get(4).getID(), createFadeOut(0.25, Utils.getColorRGB(0,0,0)), createFadeIn(0.25, Utils.getColorRGB(0,0,0)));
 					}, null);
 				}
 			}

@@ -88,7 +88,7 @@ class Design_43_43 extends ActorScript
 		actor.alpha = 0 / 100;
 		runLater(1000 * 1.5, function(timeTask:TimedTask):Void
 		{
-			reloadCurrentScene(createFadeOut(0.25, Utils.getColorRGB(0,0,0)), createFadeIn(0.25, Utils.getColorRGB(0,0,0)));
+			switchScene(GameModel.get().scenes.get(5).getID(), createFadeOut(0.25, Utils.getColorRGB(0,0,0)), createFadeIn(0.25, Utils.getColorRGB(0,0,0)));
 		}, actor);
 	}
 	

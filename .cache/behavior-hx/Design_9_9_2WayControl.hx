@@ -76,7 +76,7 @@ class Design_9_9_2WayControl extends ActorScript
 		{
 			if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
 			{
-				actor.setXVelocity(topSpeed);
+				actor.setXVelocity((Engine.engine.getGameAttribute("PlayerSpeed") : Float));
 				dir = 4;
 			}
 		}
@@ -98,7 +98,7 @@ class Design_9_9_2WayControl extends ActorScript
 		{
 			if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == true))
 			{
-				actor.setXVelocity(-(topSpeed));
+				actor.setXVelocity(-((Engine.engine.getGameAttribute("PlayerSpeed") : Float)));
 				dir = 3;
 			}
 		}
@@ -127,6 +127,9 @@ class Design_9_9_2WayControl extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("PlayerSpeed", (topSpeed + (Engine.engine.getGameAttribute("SpeedUpgrades") : Float)));
+		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
@@ -152,15 +155,15 @@ class Design_9_9_2WayControl extends ActorScript
 							actor.setYVelocity(0);
 						}
 					}
-					if((actor.getXVelocity() > topSpeed))
+					if((actor.getXVelocity() > (Engine.engine.getGameAttribute("PlayerSpeed") : Float)))
 					{
-						actor.setXVelocity(topSpeed);
+						actor.setXVelocity((Engine.engine.getGameAttribute("PlayerSpeed") : Float));
 					}
 					else
 					{
-						if((actor.getXVelocity() < -(topSpeed)))
+						if((actor.getXVelocity() < -((Engine.engine.getGameAttribute("PlayerSpeed") : Float))))
 						{
-							actor.setXVelocity(-(topSpeed));
+							actor.setXVelocity(-((Engine.engine.getGameAttribute("PlayerSpeed") : Float)));
 						}
 					}
 				}

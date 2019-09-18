@@ -78,7 +78,7 @@ class ActorEvents_57 extends ActorScript
 		Engine.engine.setGameAttribute("EnemiesLeft", ((Engine.engine.getGameAttribute("EnemiesLeft") : Float) + 1));
 		
 		/* ======================= Every N seconds ======================== */
-		runPeriodically(1000 * 2, function(timeTask:TimedTask):Void
+		runPeriodically(1000 * (2.00 - (0.05 * ((Engine.engine.getGameAttribute("Stage") : Float) - 1))), function(timeTask:TimedTask):Void
 		{
 			if(wrapper.enabled)
 			{

@@ -3,4 +3,6 @@
     <scene desc="" format="4.0.1" id="1" name="Level 1"/>
     <scene desc="" format="4.0.1" id="2" name="Main Menu"/>
     <scene desc="" format="4.0.1" id="3" name="Options"/>
+    <scene desc="" format="4.0.1" id="4" name="Shop"/>
+    <scene desc="" format="4.0.1" id="5" name="Game Over"/>
 </scenes>

@@ -89,7 +89,7 @@ class Design_1_1_DieandKillWhenHit extends ActorScript
 			{
 				if((_actorHealth > 0))
 				{
-					_actorHealth = (_actorHealth - 1);
+					_actorHealth = (_actorHealth - (Engine.engine.getGameAttribute("PlayerDamage") : Float));
 					recycleActor(actor.getLastCollidedActor());
 					Engine.engine.setGameAttribute("Bullets Alive", ((Engine.engine.getGameAttribute("Bullets Alive") : Float) - 1));
 					Engine.engine.setGameAttribute("Score", ((Engine.engine.getGameAttribute("Score") : Float) + 10));

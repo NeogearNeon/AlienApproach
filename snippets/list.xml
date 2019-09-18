@@ -78,14 +78,15 @@
         <control default="" defaultValue="" desc="" dropdown="" fullname="Left Control" hidden="false" id="7" name="controlLeft" order="6"/>
         <control default="" defaultValue="" desc="" dropdown="" fullname="Right Control" hidden="false" id="8" name="controlRight" order="7"/>
         <number default="0.0" defaultValue="0.0" desc="" dropdown="Left=3&#10;Right=4" fullname="Initial Direction" hidden="false" id="9" name="dir" order="0"/>
-        <number default="18" defaultValue="18" desc="The fastest it will move." dropdown="" fullname="Top Speed" hidden="false" id="11" name="topSpeed" order="2"/>
+        <number default="18.0" defaultValue="18.0" desc="The fastest it will move." dropdown="" fullname="Top Speed" hidden="false" id="11" name="topSpeed" order="2"/>
         <number default="0" defaultValue="0" desc="How quickly it loses speed when the key's let go." dropdown="" fullname="Slowdown Rate" hidden="false" id="12" name="decel" order="3"/>
         <blocks/>
         <events>
             <event displayName="moveRight" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
-            <event displayName="checkInput" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
-            <event displayName="moveLeft" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="3" repeats="true"/>
+            <event displayName="checkInput" enabled="true" id="3" name="event-custom" order="4" repeats="true"/>
+            <event displayName="moveLeft" enabled="true" id="4" name="event-custom" order="5" repeats="true"/>
+            <event displayName="Created" enabled="true" id="5" name="init" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_10_10_PositionLimiter" classname="scripts.Design_10_10_PositionLimiter" desc="Prevents it from going through the walls since it's a kinematic actor." description="Prevents it from going through the walls since it's a kinematic actor." design="true" drawOrder="0" id="10" name="Position Limiter" oid="-1" package="" shared="false" type="actor">
@@ -287,6 +288,10 @@
         </events>
     </snippet>
     <snippet actorid="59" attachedevent="true" class="scripts.ActorEvents_59" classname="scripts.ActorEvents_59" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="41" name="ActorEvents_59" oid="-1" package="scripts." shared="false" type="actor">
+        <number default="1.0" defaultValue="1.0" desc="" dropdown="" fullname="Explosion Force" hidden="false" id="1" name="_ExplosionForce" order="0"/>
+        <number default="10.0" defaultValue="10.0" desc="" dropdown="" fullname="Number of Actors to Create" hidden="false" id="2" name="_NumberofActorstoCreate" order="1"/>
+        <number default="0.7" defaultValue="0.7" desc="" dropdown="" fullname="Explosion Force of Second Actors" hidden="false" id="3" name="_ExplosionForceofSecondActors" order="2"/>
+        <number default="5.0" defaultValue="5.0" desc="" dropdown="" fullname="Number of Second Actors to Create" hidden="false" id="4" name="_NumberofSecondActorstoCreate" order="3"/>
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
@@ -337,7 +342,48 @@
             <event displayName="Untint" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
         </events>
     </snippet>
-    <snippet actorid="61" attachedevent="true" class="scripts.ActorEvents_68" classname="scripts.ActorEvents_68" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="47" name="ActorEvents_68" oid="-1" package="scripts." shared="false" type="actor">
+    <snippet actorid="68" attachedevent="true" class="scripts.ActorEvents_68" classname="scripts.ActorEvents_68" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="47" name="ActorEvents_68" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="48" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" shared="false" type="scene">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="71" attachedevent="true" class="scripts.ActorEvents_71" classname="scripts.ActorEvents_71" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="49" name="ActorEvents_71" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Tint" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+            <event displayName="Untint" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="5" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="73" attachedevent="true" class="scripts.ActorEvents_73" classname="scripts.ActorEvents_73" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="50" name="ActorEvents_73" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Tint" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+            <event displayName="Untint" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="5" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="75" attachedevent="true" class="scripts.ActorEvents_75" classname="scripts.ActorEvents_75" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="51" name="ActorEvents_75" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events>
+            <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>
+            <event displayName="Tint" enabled="true" id="3" name="event-mouse-enter-exit-actor" order="3" repeats="true"/>
+            <event displayName="Untint" enabled="true" id="4" name="event-mouse-enter-exit-actor" order="4" repeats="true"/>
+            <event displayName="On Actor" enabled="true" id="5" name="event-mouse-enter-exit-actor" order="2" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_5" classname="scripts.SceneEvents_5" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="52" name="SceneEvents_5" oid="-1" package="scripts." sceneid="5" shared="false" type="scene">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="61" attachedevent="true" class="scripts.ActorEvents_78" classname="scripts.ActorEvents_78" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="53" name="ActorEvents_78" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="2" name="draw" order="2" repeats="true"/>

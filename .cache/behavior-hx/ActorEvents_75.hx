@@ -61,7 +61,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_59 extends ActorScript
+class ActorEvents_75 extends ActorScript
 {
 	
 	
@@ -74,22 +74,33 @@ class ActorEvents_59 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ======================== When Creating ========================= */
+		
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled)
+			if(wrapper.enabled && 3 == mouseState)
 			{
-				if(((Engine.engine.getGameAttribute("PlayerAlive") : Bool) == false))
-				{
-					actor.setIgnoreGravity(!false);
-					actor.disableRotation();
-					actor.setAngularVelocity(Utils.RAD * (0));
-					actor.setXVelocity(0);
-					actor.setYVelocity(0);
-					actor.setVelocity((Utils.DEG * actor.getAngle()), 0);
-					actor.setCurrentFrame(actor.getCurrentFrame());
-					actor.currAnimation.setFrameDuration(actor.getCurrentFrame(), 99999999);
-				}
+				switchScene(GameModel.get().scenes.get(1).getID(), createFadeOut(0.25, Utils.getColorRGB(0,0,0)), createFadeIn(0.25, Utils.getColorRGB(0,0,0)));
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && 1 == mouseState)
+			{
+				actor.setFilter([createTintFilter(Utils.getColorRGB(51,255,0), 50/100)]);
+			}
+		});
+		
+		/* =========================== On Actor =========================== */
+		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && -1 == mouseState)
+			{
+				actor.clearFilters();
 			}
 		});
 		
