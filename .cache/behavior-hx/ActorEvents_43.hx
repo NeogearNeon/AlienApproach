@@ -63,11 +63,14 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 class ActorEvents_43 extends ActorScript
 {
+	public var _EndCoordinate:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("EndCoordinate", "_EndCoordinate");
+		_EndCoordinate = 0.0;
 		
 	}
 	
@@ -75,7 +78,42 @@ class ActorEvents_43 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		if(((Engine.engine.getGameAttribute("OpeningAnimationFinished") : Bool) == false))
+		{
+			_EndCoordinate = 290;
+			actor.alpha = -20 / 100;
+		}
+		else if(((Engine.engine.getGameAttribute("OpeningAnimationFinished") : Bool) == true))
+		{
+			actor.setY(290);
+		}
 		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(((Engine.engine.getGameAttribute("OpeningAnimationFinished") : Bool) == false))
+				{
+					if((actor.getY() > _EndCoordinate))
+					{
+						actor.setYVelocity(-10);
+					}
+					else
+					{
+						actor.setYVelocity(0);
+					}
+				}
+				if((actor.getY() <= _EndCoordinate))
+				{
+					actor.setY(_EndCoordinate);
+				}
+				if(((actor.alpha * 100) < 100))
+				{
+					actor.alpha = ((actor.alpha * 100) + 1) / 100;
+				}
+			}
+		});
 		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void

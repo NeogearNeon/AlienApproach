@@ -10,8 +10,8 @@
     <terrainRegions/>
     <actors>
         <actor a="0.0" aid="1" c="false" group="3" id="66" name="b_retry 1" order="0" sx="1.0" sy="1.0" x="216" y="253" z="0"/>
-        <actor a="0.0" aid="2" c="false" group="3" id="40" name="b_quit 2" order="1" sx="1.0" sy="1.0" x="217" y="307" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="3" id="78" name="FinalScore 3" order="2" sx="1.0" sy="1.0" x="220" y="188" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="3" id="78" name="FinalScore 3" order="1" sx="1.0" sy="1.0" x="220" y="188" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="3" id="90" name="b_quitstill 4" order="2" sx="1.0" sy="1.0" x="217" y="308" z="0"/>
     </actors>
     <snippets/>
     <terrain/>

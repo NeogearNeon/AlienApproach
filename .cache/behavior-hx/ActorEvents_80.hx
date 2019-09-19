@@ -75,7 +75,22 @@ class ActorEvents_80 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
+		if(((Engine.engine.getGameAttribute("OpeningAnimationFinished") : Bool) == false))
+		{
+			actor.alpha = -20 / 100;
+		}
 		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(((actor.alpha * 100) < 100))
+				{
+					actor.alpha = ((actor.alpha * 100) + 1) / 100;
+				}
+			}
+		});
 		
 		/* =========================== On Actor =========================== */
 		addMouseOverActorListener(actor, function(mouseState:Int, list:Array<Dynamic>):Void

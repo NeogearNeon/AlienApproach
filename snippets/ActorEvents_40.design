@@ -65,4 +65,114 @@
         </apply-filter>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <if comment="false" x="37" y="70">
+                            <group eventID="4" id="-1">
+                                <set-dxy comment="false" x="48" y="108">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="-10"/>
+                                </set-dxy>
+                            </group>
+                            <more comment="false" id="0" x="0" y="0">
+                                <get-xy comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                </get-xy>
+                                <get-val-32-1 comment="false" id="1" x="0" y="0"/>
+                            </more>
+                        </if>
+                        <else comment="false" x="37" y="147">
+                            <group eventID="4" id="-1">
+                                <set-dxy comment="false" x="48" y="167">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                </set-dxy>
+                            </group>
+                        </else>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-15 comment="false" id="0" x="0" y="0"/>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="218">
+                    <group eventID="4" id="-1">
+                        <set-xy comment="false" x="37" y="256">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <get-val-32-1 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                    </group>
+                    <lesseq comment="false" id="0" x="0" y="0">
+                        <get-xy comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </get-xy>
+                        <get-val-32-1 comment="false" id="1" x="0" y="0"/>
+                    </lesseq>
+                </if>
+                <if comment="false" x="26" y="300">
+                    <group eventID="4" id="-1">
+                        <set-opacity comment="false" x="37" y="338">
+                            <ACTOR eid="this" id="0"/>
+                            <plus comment="false" id="1" x="0" y="0">
+                                <get-opacity comment="false" id="0" x="0" y="0">
+                                    <ACTOR eid="this" id="0"/>
+                                </get-opacity>
+                                <int id="1" val="1"/>
+                            </plus>
+                        </set-opacity>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-opacity comment="false" id="0" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                        </get-opacity>
+                        <int id="1" val="100"/>
+                    </less>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="5" id="-1">
+                        <set-val-32-1 comment="false" x="37" y="70">
+                            <int id="0" val="340"/>
+                        </set-val-32-1>
+                        <set-opacity comment="false" x="37" y="90">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="-20"/>
+                        </set-opacity>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-15 comment="false" id="0" x="0" y="0"/>
+                        <false comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <else-if comment="false" x="26" y="129">
+                    <group eventID="5" id="-1">
+                        <set-xy comment="false" x="37" y="159">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="340"/>
+                        </set-xy>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-15 comment="false" id="0" x="0" y="0"/>
+                        <true comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </else-if>
+            </group>
+        </init>
+    </group>
+    <group eventID="5" id="-1"/>
 </groups>

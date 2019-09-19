@@ -62,7 +62,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_5 extends SceneScript
+class SceneEvents_2 extends SceneScript
 {
 	
 	
@@ -76,9 +76,10 @@ class SceneEvents_5 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		if(((Engine.engine.getGameAttribute("SoundDisabled") : Bool) == false))
+		if(((Engine.engine.getGameAttribute("MusicStarted") : Bool) == false))
 		{
-			playSound(getSound(87));
+			Engine.engine.setGameAttribute("MusicStarted", true);
+			loopSoundOnChannel(getSound(53), 1);
 		}
 		
 	}
